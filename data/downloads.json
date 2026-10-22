@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    { "id": "engine", "kind": "engine", "product": "BLACKWING ENGINE", "platform": null, "version": null, "engineVersion": null,
+      "status": "unavailable", "url": null, "sizeBytes": null, "sha256": null, "license": null, "minRequirements": null,
+      "description": { "ar": "لم يُنشر ملف تنزيل للمحرك بعد.", "en": "No engine download has been published yet." } },
+    { "id": "template-android", "kind": "export-template", "product": "Android Export Template", "platform": "Android", "version": null, "engineVersion": null,
+      "status": "unavailable", "url": null, "sizeBytes": null, "sha256": null, "license": null, "minRequirements": null,
+      "description": { "ar": "قالب تصدير Android أصلي للمحرك — مخطط له مستقبلاً ولم يبدأ نشره.", "en": "A native Android export template for the engine — planned for the future, not published." } }
+  ]
+}
