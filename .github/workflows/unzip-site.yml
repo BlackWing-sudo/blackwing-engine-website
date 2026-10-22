@@ -1,0 +1,59 @@
+
+name: Extract BLACKWING Website
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract website ZIP
+        shell: bash
+        run: |
+          set -e
+
+          ZIP_FILE=$(find . -maxdepth 1 -type f -name '*.zip' -print -quit)
+
+          if [ -z "$ZIP_FILE" ]; then
+            echo "ERROR: No ZIP file found in repository root."
+            exit 1
+          fi
+
+          TEMP_DIR=$(mktemp -d)
+          unzip -q "$ZIP_FILE" -d "$TEMP_DIR"
+
+          mapfile -t ITEMS < <(find "$TEMP_DIR" -mindepth 1 -maxdepth 1)
+
+          if [ "${#ITEMS[@]}" -eq 1 ] && [ -d "${ITEMS[0]}" ]; then
+            SOURCE_DIR="${ITEMS[0]}"
+          else
+            SOURCE_DIR="$TEMP_DIR"
+          fi
+
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            "$SOURCE_DIR"/ ./
+
+          rm -f "$ZIP_FILE"
+          rm -rf "$TEMP_DIR"
+
+      - name: Commit extracted website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract BLACKWING ENGINE website"
+            git push
+          else
+            echo "No changes to commit."
+          fi
