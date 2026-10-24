@@ -541,3 +541,139 @@ code {
         transition-duration: .01ms !important;
     }
 }
+
+
+/* ========================================
+   BLACKWING SOCIAL ACCOUNTS
+======================================== */
+
+.social-section {
+    margin-block: 48px;
+}
+
+.social-intro {
+    max-width: 680px;
+    color: var(--muted, #a5a5a5);
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .22s ease,
+                border-color .22s ease,
+                box-shadow .22s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4ad62;
+    box-shadow: 0 10px 28px #0003;
+}
+
+.social-card:focus-visible {
+    outline: 2px solid #d4ad62;
+    outline-offset: 4px;
+}
+
+.social-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 13px;
+    color: #d4ad62;
+    background: #d4ad6214;
+}
+
+.social-icon svg {
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+.itch-icon {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.youtube-icon {
+    color: #ff5252;
+}
+
+.social-platform {
+    color: #d4ad62;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.social-name {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 1rem;
+}
+
+.social-description {
+    color: var(--muted, #a5a5a5);
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+.social-note {
+    padding: 9px 10px;
+    border-inline-start: 2px solid #d4ad62;
+    border-radius: 4px;
+    background: #d4ad620c;
+    color: var(--muted, #a5a5a5);
+    font-size: .82rem;
+    line-height: 1.8;
+}
+
+.social-visit {
+    margin-top: auto;
+    padding-top: 8px;
+    color: #d4ad62;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .social-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .social-card {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-card {
+        transition: none;
+    }
+
+    .social-card:hover {
+        transform: none;
+    }
+}
+
