@@ -1,86 +1,372 @@
 <!doctype html>
-
 <html lang="ar" dir="rtl" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BLACKWING ENGINE — محرك ألعاب مستقل</title>
-<meta name="description" content="الموقع الرسمي لمحرك BLACKWING ENGINE، الذي أسسه ويطوره حامد نجم. تعرّف على المشروع والتنزيلات والتوثيق والإصدارات.">
-<meta name="author" content="Hamed Najm"><meta property="og:type" content="website">
-<meta property="og:site_name" content="BLACKWING ENGINE">
-<meta property="og:title" content="BLACKWING ENGINE — محرك ألعاب مستقل">
-<meta property="og:description" content="الموقع الرسمي لمحرك BLACKWING ENGINE، الذي أسسه ويطوره حامد نجم.">
-<meta property="og:url" content="https://blackwing1.pages.dev/">
-<meta property="og:image" content="https://blackwing1.pages.dev/assets/img/logo.svg"><meta name="theme-color" content="#0d0e10">
+
+<title>BLACKWING ENGINE — محرك ألعاب مستقل | حامد نجم</title>
+
+<meta name="description" content="الموقع الرسمي لمحرك BLACKWING ENGINE، مشروع محرك ألعاب مستقل أسسه ويطوره حامد نجم، مؤسس BLACKWING STUDIO من الموصل، العراق. المحرك قيد التطوير والتحقق، وسيُعلن عن موعد الإطلاق قريباً.">
+<meta name="author" content="Hamed Najam">
+<meta name="theme-color" content="#0d0e10">
+<meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://blackwing1.pages.dev/">
 <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLACKWING ENGINE">
+<meta property="og:title" content="BLACKWING ENGINE — محرك ألعاب مستقل">
+<meta property="og:description" content="مشروع محرك ألعاب مستقل من تطوير حامد نجم، مؤسس BLACKWING STUDIO في الموصل، العراق. موعد الإطلاق سيُعلن قريباً.">
+<meta property="og:url" content="https://blackwing1.pages.dev/">
+<meta property="og:image" content="https://blackwing1.pages.dev/assets/img/logo.svg">
+<meta property="og:locale" content="ar_IQ">
+
+<meta name="google-site-verification" content="eOXaqMLbxxvdj_q37AGl-CrjtqHxlTTIXhhUY7mb08c">
+
+<style>
+/* Developer identity */
+.developer-profile {
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-profile .profile-label {
+    color: #d4ad62;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.developer-profile .profile-name {
+    margin-bottom: .35rem;
+}
+
+.developer-profile .profile-location {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.iraqi-flag {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 1.4;
+    transform-origin: left center;
+    animation: iraqi-flag-wave 2s ease-in-out infinite;
+    filter: drop-shadow(0 2px 5px #0005);
+}
+
+@keyframes iraqi-flag-wave {
+    0%, 100% {
+        transform: perspective(120px) rotateY(0deg) skewY(0deg);
+    }
+    25% {
+        transform: perspective(120px) rotateY(-12deg) skewY(-3deg);
+    }
+    50% {
+        transform: perspective(120px) rotateY(8deg) skewY(2deg);
+    }
+    75% {
+        transform: perspective(120px) rotateY(-6deg) skewY(-1deg);
+    }
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+    padding: 8px 12px;
+    border: 1px solid #d4ad6244;
+    border-radius: 10px;
+    color: #e4c681;
+    background: #d4ad6210;
+    font-size: .92rem;
+}
+
+.project-status-dot {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    border-radius: 50%;
+    background: #d4ad62;
+    box-shadow: 0 0 10px #d4ad6280;
+    animation: status-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .4; }
+}
+
+.profile-divider {
+    height: 1px;
+    margin: 20px 0;
+    border: 0;
+    background: linear-gradient(90deg, transparent, #d4ad6255, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .iraqi-flag,
+    .project-status-dot {
+        animation: none;
+    }
+}
+</style>
+
 <script type="module" src="/assets/js/main.js"></script>
-<meta name="google-site-verification" content="eOXaqMLbxxvdj_q37AGl-CrjtqHxlTTIXhhUY7mb08c" />
 </head>
+
 <body>
-<a class="skip" href="#main" data-i18n="skip">تخطي إلى المحتوى</a><header class="site-header">
-<div class="wrap bar">
-<a class="brand" href="/"><img src="/assets/img/logo.svg" alt="BLACKWING ENGINE" width="32" height="32"><span dir="ltr">BLACKWING ENGINE</span></a>
-<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-i18n="menu">القائمة</button>
-<nav id="nav" class="nav" aria-label="التنقل الرئيسي" data-i18n-aria="nav_label">
-<a href="/" aria-current="page" data-i18n="nav_home">الرئيسية</a>
-<a href="/downloads/" data-i18n="nav_downloads">التنزيلات</a>
-<a href="/docs/" data-i18n="nav_docs">التوثيق</a>
-<a href="/releases/" data-i18n="nav_releases">الإصدارات</a>
-<a href="/about/" data-i18n="nav_about">حول</a>
-</nav>
-<button class="lang-btn" type="button" lang="en">English</button>
-</div>
-</header><main id="main" class="wrap">
-<section class="hero">
-<p class="kicker" data-i18n="hero_kicker">محرك ألعاب مستقل</p>
-<h1 dir="ltr" data-i18n="hero_title">BLACKWING ENGINE</h1>
-<p class="lead" data-i18n="hero_lead">محرك ألعاب مستقل قيد التطوير، مبني بـ JavaScript ES Modules. هذا الموقع هو المرجع الرسمي للتنزيلات والتوثيق والإصدارات.</p>
-<p class="actions">
-<a class="btn primary" href="/docs/" data-i18n="cta_start">ابدأ مع التوثيق</a>
-<a class="btn" href="/downloads/" data-i18n="cta_dl">صفحة التنزيلات</a>
-</p>
-</section><section>
-<h2 data-i18n="what_title">ما هو BLACKWING ENGINE؟</h2>
-<p data-i18n="what_body">مشروع محرك ألعاب مستقل بنموذج أولي مبني بـ JavaScript ES Modules. نعرض في هذا الموقع ما هو منشور ومؤكد فقط.</p>
-</section><section class="developer-section">
-<h2>مؤسس ومطوّر المحرك</h2>
-<div class="card">
-<h3 dir="ltr">Hamed Najm</h3>
-<p class="muted">حامد نجم</p>
-<p>مؤسس ومطوّر BLACKWING ENGINE، ويقود تطوير المشروع ورؤيته التقنية.</p>
-</div>
-</section><section>
-<h2 data-i18n="feat_title">الميزات</h2>
-<div class="notice" data-i18n="feat_pending">قائمة الميزات ستُضاف هنا بعد التحقق منها فعلياً في المحرك. لا نعرض ميزة غير مكتملة على أنها متاحة.</div>
-</section><section class="grid">
-<a class="card" href="/downloads/"><h3 data-i18n="card_dl_t">التنزيلات</h3><p class="muted" data-i18n="card_dl_d">المحرك وقوالب التصدير مع حالة كل ملف.</p></a>
-<a class="card" href="/docs/"><h3 data-i18n="card_docs_t">التوثيق</h3><p class="muted" data-i18n="card_docs_d">خطوات البدء والتثبيت وإنشاء المشاريع.</p></a>
-<a class="card" href="/releases/"><h3 data-i18n="card_rel_t">الإصدارات</h3><p class="muted" data-i18n="card_rel_d">سجل التغييرات للإصدارات المنشورة.</p></a>
-</section><section class="cta">
-<h2 data-i18n="start_title">جاهز للبدء؟</h2>
-<p data-i18n="start_body">اقرأ صفحة التوثيق، وتابع صفحة التنزيلات لمعرفة متى تُنشر الملفات.</p>
-<a class="btn primary" href="/docs/" data-i18n="cta_start">ابدأ مع التوثيق</a>
-</section>
-</main><footer class="site-footer">
-<div class="wrap foot">
-<div>
-<strong dir="ltr">BLACKWING ENGINE</strong>
-<p class="muted" data-i18n="foot_tag">محرك ألعاب مستقل.</p>
-<p class="muted small">© 2026 Hamed Najm — BLACKWING ENGINE. جميع الحقوق محفوظة وفقًا للحقوق والتراخيص المنطبقة.</p>
-</div>
-<div>
-<h2 class="small" data-i18n="foot_pages">الصفحات</h2>
-<nav class="foot-nav">
-<a href="/" data-i18n="nav_home">الرئيسية</a>
-<a href="/downloads/" data-i18n="nav_downloads">التنزيلات</a>
-<a href="/docs/" data-i18n="nav_docs">التوثيق</a>
-<a href="/releases/" data-i18n="nav_releases">الإصدارات</a>
-<a href="/about/" data-i18n="nav_about">حول</a>
-</nav>
-</div>
-</div>
+
+<a class="skip" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
+
+<header class="site-header">
+    <div class="wrap bar">
+
+        <a class="brand" href="/" aria-label="BLACKWING ENGINE - الرئيسية">
+            <img src="/assets/img/logo.svg"
+                 alt="BLACKWING ENGINE"
+                 width="32"
+                 height="32">
+            <span dir="ltr">BLACKWING ENGINE</span>
+        </a>
+
+        <button class="menu-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav"
+                data-i18n="menu">القائمة</button>
+
+        <nav id="nav"
+             class="nav"
+             aria-label="التنقل الرئيسي"
+             data-i18n-aria="nav_label">
+
+            <a href="/" aria-current="page" data-i18n="nav_home">الرئيسية</a>
+            <a href="/downloads/" data-i18n="nav_downloads">التنزيلات</a>
+            <a href="/docs/" data-i18n="nav_docs">التوثيق</a>
+            <a href="/releases/" data-i18n="nav_releases">الإصدارات</a>
+            <a href="/about/" data-i18n="nav_about">حول</a>
+
+        </nav>
+
+        <button class="lang-btn" type="button" lang="en">English</button>
+
+    </div>
+</header>
+
+<main id="main" class="wrap">
+
+    <!-- Main introduction -->
+    <section class="hero">
+
+        <p class="kicker" data-i18n="hero_kicker">محرك ألعاب مستقل</p>
+
+        <h1 dir="ltr" data-i18n="hero_title">BLACKWING ENGINE</h1>
+
+        <p class="lead" data-i18n="hero_lead">
+            محرك ألعاب مستقل قيد التطوير، مبني بـ JavaScript ES Modules.
+            هذا الموقع هو المرجع الرسمي للتنزيلات والتوثيق والإصدارات.
+        </p>
+
+        <div class="project-status" role="status">
+            <span class="project-status-dot" aria-hidden="true"></span>
+            <span>المحرك قيد التطوير والتحقق والاختبار</span>
+        </div>
+
+        <p class="actions">
+            <a class="btn primary" href="/docs/" data-i18n="cta_start">ابدأ مع التوثيق</a>
+            <a class="btn" href="/downloads/" data-i18n="cta_dl">صفحة التنزيلات</a>
+        </p>
+
+    </section>
+
+    <!-- About the engine -->
+    <section>
+        <h2 data-i18n="what_title">ما هو BLACKWING ENGINE؟</h2>
+
+        <p data-i18n="what_body">
+            مشروع محرك ألعاب مستقل بنموذج أولي مبني بـ JavaScript ES Modules.
+            نعرض في هذا الموقع ما هو منشور ومؤكد فقط.
+        </p>
+    </section>
+
+    <!-- Developer and studio -->
+    <section class="developer-section">
+
+        <h2>المؤسس والمطوّر</h2>
+
+        <div class="card developer-profile">
+
+            <p class="profile-label">FOUNDER &amp; DEVELOPER</p>
+
+            <h3 class="profile-name" dir="ltr">Hamed Najam</h3>
+
+            <p class="muted">حامد نجم</p>
+
+            <hr class="profile-divider">
+
+            <p>
+                مؤسس ومطوّر <strong dir="ltr">BLACKWING ENGINE</strong>،
+                ومؤسس استوديو
+                <strong dir="ltr">BLACKWING STUDIO</strong>.
+                يقود تطوير المحرك والعمل على بنائه واختباره وتطوير رؤيته التقنية.
+            </p>
+
+            <div class="profile-location">
+
+                <span class="iraqi-flag"
+                      role="img"
+                      aria-label="علم جمهورية العراق">🇮🇶</span>
+
+                <div>
+                    <strong>العراق — نينوى، الموصل</strong>
+                    <p class="muted" dir="ltr" lang="en">
+                        Mosul, Nineveh, Iraq
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="muted small">
+                مشروع مستقل قيد التطوير.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Development status -->
+    <section>
+
+        <h2>حالة التطوير وموعد الإطلاق</h2>
+
+        <div class="card">
+
+            <h3>نعمل على بناء المحرك والتحقق منه</h3>
+
+            <p>
+                لا يزال BLACKWING ENGINE قيد التطوير والتحقق والاختبار.
+                يجري العمل على تطوير مكوناته والتأكد من استقرارها قبل الإعلان
+                عن تفاصيل الإطلاق.
+            </p>
+
+            <p>
+                <strong>موعد الإطلاق:</strong>
+                سيُعلن عنه قريباً عبر الموقع الرسمي بعد تحديده.
+            </p>
+
+            <p class="muted small">
+                لم يُحدّد موعد إطلاق رسمي حتى الآن.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section>
+
+        <h2 data-i18n="feat_title">الميزات</h2>
+
+        <div class="notice" data-i18n="feat_pending">
+            قائمة الميزات ستُضاف هنا بعد التحقق منها فعلياً في المحرك.
+            لا نعرض ميزة غير مكتملة على أنها متاحة.
+        </div>
+
+    </section>
+
+    <!-- Navigation cards -->
+    <section class="grid">
+
+        <a class="card" href="/downloads/">
+            <h3 data-i18n="card_dl_t">التنزيلات</h3>
+            <p class="muted" data-i18n="card_dl_d">
+                المحرك وقوالب التصدير مع حالة كل ملف.
+            </p>
+        </a>
+
+        <a class="card" href="/docs/">
+            <h3 data-i18n="card_docs_t">التوثيق</h3>
+            <p class="muted" data-i18n="card_docs_d">
+                خطوات البدء والتثبيت وإنشاء المشاريع.
+            </p>
+        </a>
+
+        <a class="card" href="/releases/">
+            <h3 data-i18n="card_rel_t">الإصدارات</h3>
+            <p class="muted" data-i18n="card_rel_d">
+                سجل التغييرات للإصدارات المنشورة.
+            </p>
+        </a>
+
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta">
+
+        <h2 data-i18n="start_title">جاهز للبدء؟</h2>
+
+        <p data-i18n="start_body">
+            اقرأ صفحة التوثيق، وتابع صفحة التنزيلات لمعرفة متى تُنشر الملفات.
+        </p>
+
+        <a class="btn primary" href="/docs/" data-i18n="cta_start">
+            ابدأ مع التوثيق
+        </a>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="wrap foot">
+
+        <div>
+
+            <strong dir="ltr">BLACKWING ENGINE</strong>
+
+            <p class="muted" data-i18n="foot_tag">
+                محرك ألعاب مستقل.
+            </p>
+
+            <p class="muted small">
+                مشروع أسسه ويطوره حامد نجم،
+                مؤسس BLACKWING STUDIO — الموصل، العراق 🇮🇶
+            </p>
+
+            <p class="muted small">
+                © 2026 Hamed Najam — BLACKWING ENGINE.
+                جميع الحقوق محفوظة وفقاً للحقوق والتراخيص المنطبقة.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h2 class="small" data-i18n="foot_pages">الصفحات</h2>
+
+            <nav class="foot-nav">
+
+                <a href="/" data-i18n="nav_home">الرئيسية</a>
+                <a href="/downloads/" data-i18n="nav_downloads">التنزيلات</a>
+                <a href="/docs/" data-i18n="nav_docs">التوثيق</a>
+                <a href="/releases/" data-i18n="nav_releases">الإصدارات</a>
+                <a href="/about/" data-i18n="nav_about">حول</a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
 </footer>
+
 </body>
 </html>
